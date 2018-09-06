@@ -45,5 +45,7 @@ for i in range(1,101):
     #print("Accuracy of K-Nearest neighbours with ",i ," neighbours- ", acc_knn)
 
 #visualize accuracy_score
+acc_knn = np.array(acc_knn)
+acc_knn = (acc_knn-acc_knn.min())/(acc_knn.max()-acc_knn.min())
 plt.figure(figsize=[10,5])
 plt.plot(neigh, acc_knn)
